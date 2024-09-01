@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .box {
+            height: 34px;
+            width: 40px;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">box 1</div>
+        <div class="box"> box 2</div>
+        <div class="box">box 3</div>
+        <div class="box"> box 4</div>
+        <div class="box"> box 5</div>
+    </div>
+    <script>
+        let colors = ["green", "red", "cyan", "yellow", "orange", "black"]
+        let size = colors.length
+        let random = Math.floor(Math.random * size)
+
+        console.log(document.querySelectorAll(".box"))
+        let box = document.querySelectorAll(".box")
+       
+       box.forEach(e=>{
+        let random=Math.floor(Math.random()*size)
+        e.style.color=colors[random]
+});
+
+
+ 
+box.forEach(e=>{
+        let random=Math.floor(Math.random()*size)
+        e.style.backgroundColor=colors[random]
+});
+
+    </script>
+</body>
+
+</html>
